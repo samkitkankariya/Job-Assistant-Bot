@@ -73,3 +73,49 @@ Ensure you have Python installed on your system along with the required librarie
    python main.py
    ```
 
+Sure, here's an updated section for the README file explaining how to keep the bot running indefinitely using a website for hosting the server, along with setting up UptimeBot to ping the server every 5 minutes:
+
+---
+
+## Keeping the Bot Live
+
+To ensure continuous operation of the Job Assistant Telegram Bot, follow these steps to host the bot's server on a website and set up monitoring using UptimeBot:
+
+### 1. Hosting the Server
+
+Choose a hosting service provider for deploying your bot's server. Some popular options include:
+
+- **Heroku**: Offers a free tier for hosting web applications.
+- **PythonAnywhere**: Provides hosting specifically for Python applications.
+- **AWS (Amazon Web Services)**: Offers various services for hosting and managing applications.
+
+Follow the hosting provider's instructions to deploy your Flask server, which keeps the bot running continuously.
+
+### 2. Running `keep_alive.py`
+
+The `keep_alive.py` script ensures that the Flask server stays active. It creates a simple web server endpoint that UptimeBot will ping to keep the server alive.
+
+Run the `keep_alive.py` script on your hosted server using the command:
+```bash
+python keep_alive.py
+```
+
+### 3. Setting Up Uptime Monitoring
+
+[UptimeBot](https://uptimerobot.com/) is a free service that monitors websites and notifies you if they go down. It can also be used to ping your Flask server regularly to prevent it from sleeping.
+
+Follow these steps to set up UptimeBot monitoring:
+
+1. **Create a UptimeBot Account**: Sign up for a free account on [UptimeBot](https://uptimerobot.com/).
+
+2. **Add a New Monitor**:
+   - Select "Add New Monitor" from your UptimeBot dashboard.
+   - Choose "HTTP(s)" as the monitor type.
+   - Enter the URL of your Flask server (provided by your hosting service) in the "URL" field.
+   - Set the monitoring interval to every 5 minutes or as desired.
+
+3. **Receive Notifications**: Configure UptimeBot to send you notifications via email or other preferred channels if your server becomes unreachable.
+
+By following these steps, your Job Assistant Telegram Bot's server will remain live, ensuring uninterrupted bot functionality.
+
+
