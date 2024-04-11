@@ -73,10 +73,6 @@ Ensure you have Python installed on your system along with the required librarie
    python main.py
    ```
 
-Sure, here's an updated section for the README file explaining how to keep the bot running indefinitely using a website for hosting the server, along with setting up UptimeBot to ping the server every 5 minutes:
-
----
-
 ## Keeping the Bot Live
 
 To ensure continuous operation of the Job Assistant Telegram Bot, follow these steps to host the bot's server on a website and set up monitoring using UptimeBot:
